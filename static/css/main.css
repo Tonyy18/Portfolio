@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+body {
+    background-color: #1E1919;
+}
+h1 {
+    color: white
+}
