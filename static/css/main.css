@@ -173,6 +173,7 @@ section header h1 {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,1);
 }
 .index-section .container {
     padding-top: calc(var(--nav-height))
@@ -195,6 +196,7 @@ section header h1 {
 .index-section .about .btn {
     font-weight: bold;
     margin-top: 20px;
+    letter-spacing: 2px;
 }
 .tech-section .tech-cards {
     width: calc(calc(200px + 40px) * 4);
@@ -338,6 +340,11 @@ footer .social img {
     }
     .index-section .left {
         display: none;
+    }
+}
+@media(max-width: 540px) {
+    section .card {
+        margin: 5px;
     }
 }
 @media(max-width: 500px) {
