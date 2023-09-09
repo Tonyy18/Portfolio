@@ -2,10 +2,162 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static '/css/main.css'%}">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>test</h1>
-        <p>Liiba Laaba</p>
+        <nav class="navbar">
+            <div class="container">
+                <header>
+                    <img src="{% static '/images/logo.png'%}" class="logo">
+                    <button class="toggle" id="toggle">
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                    </button>
+                </header>
+                <div class="collapse">
+                    <header>
+                        <img src="{% static '/images/logo.png'%}" class="logo">
+                    </header>
+                    <ul class="menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="index-section" id="about">
+            <div class="container">
+                <div class="left divider">
+                    <img src="{% static '/images/profile.jpg' %}">
+                </div>
+                <div class="right divider">
+                    <div class="about mobile-centered">
+                        <h1>About us</h1>
+                        <p>Hi, my name is Toni Isotalo and I'm an electrical engineer, father and also a software developer working full time as software engineer. I'm familiar with various types of technologies and experienced building a complete pipeline starting from the application design all the way to the delivery.</p>
+                        <p>This is my personal website which I hope will gain your trust to help me make your idea of a software real</p>
+                        <a href="mailto: toni.isotalo@hotmail.com" class="btn btn-white">Let's work together!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wave">
+                <img src="{% static '/images/wave.png' %}">
+            </div>
+        </section>
+        <section class="services-section" id="services">
+            <div class="container">
+                <header>
+                    <h1>Our Services</h1>
+                </header>
+                <div class="service-cards">
+                    <div class="card" data-aos="fade-right" data-aos-duration="500">
+                        <img src="{% static '/images/webdev.png'%}">
+                        <h6>Web Development</h6>
+                    </div>
+                    <div class="card" data-aos="fade-down" data-aos-duration="900">
+                        <img src="{% static '/images/webdesign.png'%}">
+                        <h6>Web Designing</h6>
+                    </div>
+                    <div class="card" data-aos="fade-left" data-aos-duration="1300">
+                        <img src="{% static '/images/softdev.png'%}">
+                        <h6>Software Development</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <header>
+                    <h1>Projects</h1>
+                </header>
+                <div class="project-cards">
+                    <div class="card">
+                        <div class="project-image" style="background-image: url({% static '/images/keyforest.png'%})"></div>
+                        <div class="desc">
+                            <p>Platform for selling softwares using license keys. Create and manage license keys for softwares using a developer dashboard and track its statistics. The application implements full Stripe integration to provide payment and subscription features</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="project-image" style="background-image: url({% static '/images/dcbotting.png'%})"></div>
+                        <div class="desc">
+                            <p>Discord bots has been a big part of discord since the beginning. We have created a web application to create, run and manage discord bots easily. Build your own bots using visual components without any coding experience. This application contains the implementation of discord rest api and socket gateways</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tech-section" id="technologies">
+            <div class="container">
+                <header>
+                    <h1>Technologies</h1>
+                </header>
+                <div class="tech-cards" data-aos="flip-up" data-aos-duration="900">
+                    <div class="card">
+                        <img src="{% static '/images/python.png' %}">
+                        <p>Python</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/django.png' %}">
+                        <p>Django</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/react.png' %}">
+                        <p>React</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/nodejs.png' %}">
+                        <p>Node.JS</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/java.png' %}">
+                        <p>Java</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/docker.png' %}">
+                        <p>Docker</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/jenkins.png' %}">
+                        <p>Jenkins CI</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static '/images/sql.png' %}">
+                        <p>SQL databases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="container">
+                <p>&copy; Toni Isotalo</p>
+                <p><a href="mailto: toni.isotalo@hotmail.com">toni.isotalo@hotmail.com</a>, +385 400762293</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/toni-isotalo-a68127172/" target="_blank"><img src="{% static '/images/linkedin.png' %}"></a>
+                    <a href="https://www.fiverr.com/tonii18" target="_blank"><img src="{% static '/images/fiverr.png' %}"></a>
+                    <a href="https://github.com/Tonyy18" target="_blank"><img src="{% static '/images/github.png' %}"></a>
+                    <a href="https://www.facebook.com/toni.isotalo.35" target="_blank"><img src="{% static '/images/facebook.png' %}"></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            $("#toggle").click(function() {
+                const parent = $(this).parents(".navbar");
+                parent.toggleClass("open")
+            })
+            $('a[href^="#"]').click(function () {
+                $('html, body').animate({
+                    scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top - 80
+                }, 450);
+                return false;
+            });
+        </script>
+        <script type="text/javascript">jQuery(document).ready(function($){$(function() {      AOS.init(); });  });  </script>
     </body>
 </html>
