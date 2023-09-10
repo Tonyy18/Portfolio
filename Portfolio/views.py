@@ -7,7 +7,7 @@ def index(request):
 def robot(request):
     f = open("resources/robot.txt")
     text = f.read()
-    return HttpResponse(text)
+    return HttpResponse(text, content_type="text/plain")
 
 def sitemap(request):
     f = open("resources/sitemap.xml")

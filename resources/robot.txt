@@ -1,1 +1,4 @@
+User-agent: *
+allow: /
+
 Sitemap: http://isotalodev.com/sitemap.xml
