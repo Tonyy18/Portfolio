@@ -1,2 +1,5 @@
 django
 mysqlclient
+pyOpenSSL
+django-extensions
+Werkzeug

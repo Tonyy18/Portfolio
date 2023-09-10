@@ -19,7 +19,7 @@
                         <div class="icon"></div>
                     </button>
                 </header>
-                <div class="collapse">
+                <div class="collapse" id="collapse">
                     <header>
                         <img src="{% static '/images/logo.png'%}" class="logo">
                     </header>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="right divider">
                     <div class="about mobile-centered">
-                        <h1>About us</h1>
+                        <h1>About me</h1>
                         <p>Hi, my name is Toni Isotalo and I'm an electrical engineer, father and also a software developer working full time as software engineer. I'm familiar with various types of technologies and experienced building a complete pipeline starting from the application design all the way to the delivery.</p>
                         <p>This is my personal website which I hope will gain your trust to help me make your idea of a software real</p>
                         <a href="mailto: toni.isotalo@hotmail.com" class="btn btn-white">Let's work together!</a>
@@ -157,6 +157,14 @@
                 }, 450);
                 return false;
             });
+            $("#collapse a").click(function() {
+                $(".navbar").removeClass("open");
+            })
+            $(document).click(function(e) {
+                if($(e.target).parents(".navbar").length == 0) {
+                    $(".navbar").removeClass("open")
+                }
+            })
         </script>
         <script type="text/javascript">jQuery(document).ready(function($){$(function() {      AOS.init(); });  });  </script>
     </body>
