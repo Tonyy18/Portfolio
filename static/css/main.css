@@ -343,7 +343,7 @@ footer .social img {
     }
 }
 @media(max-width: 540px) {
-    section .card {
+    section .card:not(.services-section .service-cards .card) {
         margin: 5px;
     }
 }
