@@ -34,6 +34,7 @@ h3 > span {
 .aligned > * {
     display: inline-block;
     vertical-align: middle;
+    padding-bottom: 10px;
 }
 .aligned > *:not(last-child) {
     margin-right: 20px;
@@ -299,6 +300,11 @@ footer .social img {
         width: 100%;
     }
 }
+@media(max-width: 1018px) {
+    .tech-section .tech-cards {
+        width: 100%;
+    }
+}
 @media(max-width: 768px) {
     :root {
         --main-logo-size: 40px;
@@ -348,8 +354,7 @@ footer .social img {
     .index-section {
         padding-top: 5vh;
     }
-    .index-section .divider,
-    .tech-section .tech-cards {
+    .index-section .divider {
         width: 100%;
     }
     .index-section .left {
@@ -357,7 +362,7 @@ footer .social img {
     }
 }
 @media(max-width: 540px) {
-    section .card:not(.services-section .service-cards .card) {
+    section .card:not(.services-section .service-cards .card):not(.projects-section .project-cards .card) {
         margin: 5px;
     }
 }
